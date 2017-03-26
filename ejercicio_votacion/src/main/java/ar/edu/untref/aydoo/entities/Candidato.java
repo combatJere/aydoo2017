@@ -4,8 +4,9 @@ public class Candidato extends Entity {
 
 	private int idPartido;
 	
-	public Candidato(int id, String nombre) {
+	public Candidato(int id, String nombre, int idPartido) {
 		super(id, nombre);
+		this.idPartido = idPartido;
 	}
 
 	public int getIdPartido() {

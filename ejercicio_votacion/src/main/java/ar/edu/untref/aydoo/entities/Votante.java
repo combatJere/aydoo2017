@@ -4,8 +4,9 @@ public class Votante extends Entity {
 	
 	private int idProvincia;
 
-	public Votante(int id, String nombre) {
+	public Votante(int id, String nombre, int idPRovincia) {
 		super(id, nombre);
+		this.idProvincia = idPRovincia;
 	}
 
 	public int getIdProvincia() {
