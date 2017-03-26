@@ -7,7 +7,6 @@ import ar.edu.untref.aydoo.entities.Partido;
 import ar.edu.untref.aydoo.entities.Provincia;
 import ar.edu.untref.aydoo.entities.Votante;
 import ar.edu.untref.aydoo.entities.Voto;
-import gherkin.lexer.Id;
 
 public class Repository {
 
