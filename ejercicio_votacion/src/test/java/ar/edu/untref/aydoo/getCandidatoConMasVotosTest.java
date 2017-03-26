@@ -9,6 +9,7 @@ public class getCandidatoConMasVotosTest {
 	
 	@Test
 	public void getCandidatoConMasVotosExito() {
+		Repository.getInstance().getVotos().clear();
 		
 		VotacionController votacionController = new VotacionController();		
 		votacionController.emitirVoto(1, 1);

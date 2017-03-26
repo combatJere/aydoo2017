@@ -9,6 +9,8 @@ public class EmitirVotoTest {
 	
 	@Test
 	public void EmitirVotoExito() {
+		Repository.getInstance().getVotos().clear();
+		
 		int cantidadDeVotosAntes = Repository.getInstance().getVotos().size();
 		
 		VotacionController votacionController = new VotacionController();		

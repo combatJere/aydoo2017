@@ -1,12 +1,17 @@
 package ar.edu.untref.aydoo;
 
 import org.junit.Test;
+
+import ar.edu.untref.aydoo.repository.Repository;
+
 import org.junit.Assert;
 
 public class getPartidoConMasVotosEnProvinciaTest {
 	
 	@Test
 	public void PartidoConMasVotosEnProvinciaTest() {
+		Repository.getInstance().getVotos().clear();
+		
 		VotacionController votacionController = new VotacionController();		
 		votacionController.emitirVoto(1, 1);
 		votacionController.emitirVoto(3, 2);
