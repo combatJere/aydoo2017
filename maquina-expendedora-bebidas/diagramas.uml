@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_AGMvMBJgEeeTqsM61UeWPQ" name="Votacion">
+  <packagedElement xmi:type="uml:Class" xmi:id="_I1NGsBJgEeeTqsM61UeWPQ" name="VotacionController">
+    <ownedOperation xmi:id="_YUyaUBKFEeeTqsM61UeWPQ" name="emitirVoto">
+      <ownedParameter xmi:id="_5hCj0BKFEeeTqsM61UeWPQ" name="idVotante"/>
+      <ownedParameter xmi:id="__l8FgBKFEeeTqsM61UeWPQ" name="idCandidato"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_2Fz2QBKJEeeTqsM61UeWPQ" name="getCandidatoConMasVotos"/>
+    <ownedOperation xmi:id="_GgdDwBKKEeeTqsM61UeWPQ" name="getPartidoConMasVotosEnProvincia">
+      <ownedParameter xmi:id="_ILdNABKKEeeTqsM61UeWPQ" name="idProvincia">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:id="_WFnrsBKTEeeTqsM61UeWPQ" name="getPartidoConMasVotosEnProvinicia">
+      <ownedParameter xmi:id="_dFSMgBKTEeeTqsM61UeWPQ" name="nombreProvincia">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedParameter>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_RcHSIBJgEeeTqsM61UeWPQ" name="RepositoryService">
+    <ownedOperation xmi:id="_13eNYBKLEeeTqsM61UeWPQ" name="agregarVoto">
+      <ownedParameter xmi:id="_wPHoUBKMEeeTqsM61UeWPQ" name="voto" type="_4JN1EBJgEeeTqsM61UeWPQ"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_2vpLgBKLEeeTqsM61UeWPQ" name="getCandidatoConMasVotos"/>
+    <ownedOperation xmi:id="_3YhwcBKLEeeTqsM61UeWPQ" name="getPartidoConMasVotosEnProvinicia">
+      <ownedParameter xmi:id="_f1nqUBKMEeeTqsM61UeWPQ" name="idProvincia">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:id="_4yvrsBKLEeeTqsM61UeWPQ" name="getNombreCandidato">
+      <ownedParameter xmi:id="_4GTnABKMEeeTqsM61UeWPQ">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:id="_5bIhYBKLEeeTqsM61UeWPQ" name="getNombrePartido">
+      <ownedParameter xmi:id="_9dfHEBKMEeeTqsM61UeWPQ" name="idPartido">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:id="_6Jwh8BKLEeeTqsM61UeWPQ" name="getIdProvincia">
+      <ownedParameter xmi:id="_Nb2oQBKNEeeTqsM61UeWPQ" name="nombreProvincia">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedParameter>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_cvg5ABJgEeeTqsM61UeWPQ" name="Repository">
+    <ownedOperation xmi:id="_XQ2e0BKKEeeTqsM61UeWPQ" name="getInstance" isStatic="true"/>
+    <ownedOperation xmi:id="_NrAJcBKLEeeTqsM61UeWPQ" name="getProvincias"/>
+    <ownedOperation xmi:id="_QLLnMBKLEeeTqsM61UeWPQ" name="getVotantes"/>
+    <ownedOperation xmi:id="_RO_0oBKLEeeTqsM61UeWPQ" name="getVotos"/>
+    <ownedOperation xmi:id="_SBGnABKLEeeTqsM61UeWPQ" name="getCandidatos"/>
+    <ownedOperation xmi:id="_S-bK4BKLEeeTqsM61UeWPQ" name="getPartidos"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_teAPkBJgEeeTqsM61UeWPQ" name="Entity"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_0m16gBJgEeeTqsM61UeWPQ" name="Partido">
+    <generalization xmi:id="_eexasBJhEeeTqsM61UeWPQ" general="_teAPkBJgEeeTqsM61UeWPQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_4JN1EBJgEeeTqsM61UeWPQ" name="Voto">
+    <generalization xmi:id="_fVdyIBJhEeeTqsM61UeWPQ" general="_teAPkBJgEeeTqsM61UeWPQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_5X_8YBJgEeeTqsM61UeWPQ" name="Votante">
+    <generalization xmi:id="_e6BzUBJhEeeTqsM61UeWPQ" general="_teAPkBJgEeeTqsM61UeWPQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_6oD2EBJgEeeTqsM61UeWPQ" name="Candidato">
+    <generalization xmi:id="_cz83oBJhEeeTqsM61UeWPQ" general="_teAPkBJgEeeTqsM61UeWPQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_9OrTABJgEeeTqsM61UeWPQ" name="Provincia">
+    <generalization xmi:id="_dgnJUBJhEeeTqsM61UeWPQ" general="_teAPkBJgEeeTqsM61UeWPQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_orjQYBJkEeeTqsM61UeWPQ" memberEnd="_orj3cBJkEeeTqsM61UeWPQ _orkeghJkEeeTqsM61UeWPQ" navigableOwnedEnd="_orkeghJkEeeTqsM61UeWPQ">
+    <ownedEnd xmi:id="_orj3cBJkEeeTqsM61UeWPQ" name="entitys" type="_teAPkBJgEeeTqsM61UeWPQ" association="_orjQYBJkEeeTqsM61UeWPQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_orkegBJkEeeTqsM61UeWPQ"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_orkegRJkEeeTqsM61UeWPQ" value="*"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_orkeghJkEeeTqsM61UeWPQ" name="entitys" type="_teAPkBJgEeeTqsM61UeWPQ" association="_orjQYBJkEeeTqsM61UeWPQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_orlFkBJkEeeTqsM61UeWPQ"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_orlsoBJkEeeTqsM61UeWPQ" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_---PIBJkEeeTqsM61UeWPQ" memberEnd="_---2MBJkEeeTqsM61UeWPQ _-_ArYBJkEeeTqsM61UeWPQ" navigableOwnedEnd="_-_ArYBJkEeeTqsM61UeWPQ">
+    <ownedEnd xmi:id="_---2MBJkEeeTqsM61UeWPQ" name="votacionControllers" type="_I1NGsBJgEeeTqsM61UeWPQ" association="_---PIBJkEeeTqsM61UeWPQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_--_dQBJkEeeTqsM61UeWPQ"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_-_AEUBJkEeeTqsM61UeWPQ" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_-_ArYBJkEeeTqsM61UeWPQ" name="repositoryServices" type="_RcHSIBJgEeeTqsM61UeWPQ" aggregation="composite" association="_---PIBJkEeeTqsM61UeWPQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_-_ArYRJkEeeTqsM61UeWPQ"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_-_BScBJkEeeTqsM61UeWPQ" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Usage" xmi:id="_xBE7cBJlEeeTqsM61UeWPQ" client="_RcHSIBJgEeeTqsM61UeWPQ" supplier="_4JN1EBJgEeeTqsM61UeWPQ"/>
+  <packagedElement xmi:type="uml:Usage" xmi:id="_BFVCMBJmEeeTqsM61UeWPQ" client="_RcHSIBJgEeeTqsM61UeWPQ" supplier="_5X_8YBJgEeeTqsM61UeWPQ"/>
+  <packagedElement xmi:type="uml:Usage" xmi:id="_B4p8kBJmEeeTqsM61UeWPQ" client="_RcHSIBJgEeeTqsM61UeWPQ" supplier="_0m16gBJgEeeTqsM61UeWPQ"/>
+  <packagedElement xmi:type="uml:Usage" xmi:id="_DgakkBJmEeeTqsM61UeWPQ" client="_RcHSIBJgEeeTqsM61UeWPQ" supplier="_9OrTABJgEeeTqsM61UeWPQ"/>
+  <packagedElement xmi:type="uml:Usage" xmi:id="_FGtM8BJmEeeTqsM61UeWPQ" client="_RcHSIBJgEeeTqsM61UeWPQ" supplier="_6oD2EBJgEeeTqsM61UeWPQ"/>
+  <packagedElement xmi:type="uml:Usage" xmi:id="_OaoPYBJmEeeTqsM61UeWPQ" client="_I1NGsBJgEeeTqsM61UeWPQ" supplier="_4JN1EBJgEeeTqsM61UeWPQ"/>
+  <packagedElement xmi:type="uml:Usage" xmi:id="_g21E8BJmEeeTqsM61UeWPQ" client="_RcHSIBJgEeeTqsM61UeWPQ" supplier="_cvg5ABJgEeeTqsM61UeWPQ"/>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_lpbVoBKEEeeTqsM61UeWPQ" name="Ejecutor"/>
+  <packagedElement xmi:type="uml:Interaction" xmi:id="_hZ5n4BKJEeeTqsM61UeWPQ" name="Votacion">
+    <ownedAttribute xmi:id="_gm7dYBKKEeeTqsM61UeWPQ" name="Ejecutor" type="_lpbVoBKEEeeTqsM61UeWPQ"/>
+    <ownedAttribute xmi:id="_jXaoABKKEeeTqsM61UeWPQ" name="VotacionController" type="_I1NGsBJgEeeTqsM61UeWPQ"/>
+    <ownedAttribute xmi:id="_lF48ABKKEeeTqsM61UeWPQ" name="RepositoryService" type="_RcHSIBJgEeeTqsM61UeWPQ"/>
+    <ownedAttribute xmi:id="_HGRw0BKOEeeTqsM61UeWPQ" name="Repository" type="_cvg5ABJgEeeTqsM61UeWPQ"/>
+    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_o2PoMRKKEeeTqsM61UeWPQ" name="emitirVoto"/>
+    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_t24wMRKNEeeTqsM61UeWPQ" name="agregarVoto"/>
+    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_J8ZpYRKOEeeTqsM61UeWPQ" name="getVotos"/>
+    <lifeline xmi:id="_gm95oBKKEeeTqsM61UeWPQ" name="Ejecutor" represents="_gm7dYBKKEeeTqsM61UeWPQ" coveredBy="_o2QPQBKKEeeTqsM61UeWPQ _o2Q2UBKKEeeTqsM61UeWPQ"/>
+    <lifeline xmi:id="_jXbPEBKKEeeTqsM61UeWPQ" name="VotacionController" represents="_jXaoABKKEeeTqsM61UeWPQ" coveredBy="_o2QPQRKKEeeTqsM61UeWPQ _o2QPQxKKEeeTqsM61UeWPQ _o2QPQhKKEeeTqsM61UeWPQ _t25XQRKNEeeTqsM61UeWPQ _t25-UxKNEeeTqsM61UeWPQ"/>
+    <lifeline xmi:id="_lF48ARKKEeeTqsM61UeWPQ" name="RepositoryService" represents="_lF48ABKKEeeTqsM61UeWPQ" coveredBy="_t25-UBKNEeeTqsM61UeWPQ _t25-UhKNEeeTqsM61UeWPQ _t25-URKNEeeTqsM61UeWPQ _J8aQcBKOEeeTqsM61UeWPQ _J8a3gBKOEeeTqsM61UeWPQ"/>
+    <lifeline xmi:id="_HGSX4BKOEeeTqsM61UeWPQ" name="Repository" represents="_HGRw0BKOEeeTqsM61UeWPQ" coveredBy="_J8aQcRKOEeeTqsM61UeWPQ _J8aQcxKOEeeTqsM61UeWPQ _J8aQchKOEeeTqsM61UeWPQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_o2QPQBKKEeeTqsM61UeWPQ" name="emitirVoto_sender" covered="_gm95oBKKEeeTqsM61UeWPQ" message="_o2PoMBKKEeeTqsM61UeWPQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_o2QPQRKKEeeTqsM61UeWPQ" name="emitirVoto_receiver" covered="_jXbPEBKKEeeTqsM61UeWPQ" message="_o2PoMBKKEeeTqsM61UeWPQ"/>
+    <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_o2QPQxKKEeeTqsM61UeWPQ" name="emitirVoto" covered="_jXbPEBKKEeeTqsM61UeWPQ" finish="_o2QPQhKKEeeTqsM61UeWPQ" start="_o2QPQRKKEeeTqsM61UeWPQ" behavior="_o2PoMRKKEeeTqsM61UeWPQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_t25XQRKNEeeTqsM61UeWPQ" name="agregarVoto_sender" covered="_jXbPEBKKEeeTqsM61UeWPQ" message="_t24wMBKNEeeTqsM61UeWPQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_t25-UBKNEeeTqsM61UeWPQ" name="agregarVoto_receiver" covered="_lF48ARKKEeeTqsM61UeWPQ" message="_t24wMBKNEeeTqsM61UeWPQ"/>
+    <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_t25-UhKNEeeTqsM61UeWPQ" name="agregarVoto" covered="_lF48ARKKEeeTqsM61UeWPQ" finish="_t25-URKNEeeTqsM61UeWPQ" start="_t25-UBKNEeeTqsM61UeWPQ" behavior="_t24wMRKNEeeTqsM61UeWPQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_J8aQcBKOEeeTqsM61UeWPQ" name="getVotos_sender" covered="_lF48ARKKEeeTqsM61UeWPQ" message="_J8ZpYBKOEeeTqsM61UeWPQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_J8aQcRKOEeeTqsM61UeWPQ" name="getVotos_receiver" covered="_HGSX4BKOEeeTqsM61UeWPQ" message="_J8ZpYBKOEeeTqsM61UeWPQ"/>
+    <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_J8aQcxKOEeeTqsM61UeWPQ" name="getVotos" covered="_HGSX4BKOEeeTqsM61UeWPQ" finish="_J8aQchKOEeeTqsM61UeWPQ" start="_J8aQcRKOEeeTqsM61UeWPQ" behavior="_J8ZpYRKOEeeTqsM61UeWPQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_J8aQchKOEeeTqsM61UeWPQ" name="getVotos_reply_sender" covered="_HGSX4BKOEeeTqsM61UeWPQ" message="_J8ZpYhKOEeeTqsM61UeWPQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_J8a3gBKOEeeTqsM61UeWPQ" name="getVotos_reply_receiver" covered="_lF48ARKKEeeTqsM61UeWPQ" message="_J8ZpYhKOEeeTqsM61UeWPQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_t25-URKNEeeTqsM61UeWPQ" name="agregarVoto_reply_sender" covered="_lF48ARKKEeeTqsM61UeWPQ" message="_t25XQBKNEeeTqsM61UeWPQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_t25-UxKNEeeTqsM61UeWPQ" name="agregarVoto_reply_receiver" covered="_jXbPEBKKEeeTqsM61UeWPQ" message="_t25XQBKNEeeTqsM61UeWPQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_o2QPQhKKEeeTqsM61UeWPQ" name="emitirVoto_reply_sender" covered="_jXbPEBKKEeeTqsM61UeWPQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_o2Q2UBKKEeeTqsM61UeWPQ" name="emitirVoto_reply_receiver" covered="_gm95oBKKEeeTqsM61UeWPQ"/>
+    <message xmi:id="_o2PoMBKKEeeTqsM61UeWPQ" name="emitirVoto" receiveEvent="_o2QPQRKKEeeTqsM61UeWPQ" sendEvent="_o2QPQBKKEeeTqsM61UeWPQ" signature="_YUyaUBKFEeeTqsM61UeWPQ"/>
+    <message xmi:id="_t24wMBKNEeeTqsM61UeWPQ" name="agregarVoto" receiveEvent="_t25-UBKNEeeTqsM61UeWPQ" sendEvent="_t25XQRKNEeeTqsM61UeWPQ" signature="_13eNYBKLEeeTqsM61UeWPQ"/>
+    <message xmi:id="_t25XQBKNEeeTqsM61UeWPQ" name="agregarVoto_reply" messageSort="reply" receiveEvent="_t25-UxKNEeeTqsM61UeWPQ" sendEvent="_t25-URKNEeeTqsM61UeWPQ"/>
+    <message xmi:id="_J8ZpYBKOEeeTqsM61UeWPQ" name="getVotos" receiveEvent="_J8aQcRKOEeeTqsM61UeWPQ" sendEvent="_J8aQcBKOEeeTqsM61UeWPQ" signature="_RO_0oBKLEeeTqsM61UeWPQ"/>
+    <message xmi:id="_J8ZpYhKOEeeTqsM61UeWPQ" name="Lista de votos" messageSort="reply" receiveEvent="_J8a3gBKOEeeTqsM61UeWPQ" sendEvent="_J8aQchKOEeeTqsM61UeWPQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interaction" xmi:id="_pdZVgBKPEeeTqsM61UeWPQ" name="Votacion"/>
+  <packagedElement xmi:type="uml:Interaction" xmi:id="_twp6cBKPEeeTqsM61UeWPQ" name="Votacion">
+    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_W__woBKQEeeTqsM61UeWPQ" name="getCandidatoConMasVotos"/>
+    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_BXKKgRKREeeTqsM61UeWPQ" name="getCandidatoConMasVotos"/>
+    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_QKmJoBKREeeTqsM61UeWPQ" name="getVotos"/>
+    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_x6LpsRKREeeTqsM61UeWPQ" name="getCandidatos"/>
+    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_QfHysBKSEeeTqsM61UeWPQ" name="getNombreCandidato"/>
+    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_4Pty8RKSEeeTqsM61UeWPQ" name="getCandidatos"/>
+    <lifeline xmi:id="_JIo_QBKQEeeTqsM61UeWPQ" name="Ejecutor" represents="_gm7dYBKKEeeTqsM61UeWPQ" coveredBy="_XAAXsRKQEeeTqsM61UeWPQ _XAA-wxKQEeeTqsM61UeWPQ"/>
+    <lifeline xmi:id="_JIo_QxKQEeeTqsM61UeWPQ" name="VotacionController" represents="_jXaoABKKEeeTqsM61UeWPQ" coveredBy="_XAA-wBKQEeeTqsM61UeWPQ _XAA-whKQEeeTqsM61UeWPQ _XAA-wRKQEeeTqsM61UeWPQ _BXLYoBKREeeTqsM61UeWPQ _BXL_sBKREeeTqsM61UeWPQ _QfIZwRKSEeeTqsM61UeWPQ _QfJA0hKSEeeTqsM61UeWPQ"/>
+    <lifeline xmi:id="_JIo_QRKQEeeTqsM61UeWPQ" name="RepositoryService" represents="_lF48ABKKEeeTqsM61UeWPQ" coveredBy="_BXLYoRKREeeTqsM61UeWPQ _BXLYoxKREeeTqsM61UeWPQ _BXLYohKREeeTqsM61UeWPQ _QKmwsBKREeeTqsM61UeWPQ _QKnXwhKREeeTqsM61UeWPQ _x6MQwRKREeeTqsM61UeWPQ _x6M30xKREeeTqsM61UeWPQ _QfIZwhKSEeeTqsM61UeWPQ _QfJA0RKSEeeTqsM61UeWPQ _QfJA0BKSEeeTqsM61UeWPQ _4PuaARKSEeeTqsM61UeWPQ _4PvBExKSEeeTqsM61UeWPQ"/>
+    <lifeline xmi:id="_JIo_QhKQEeeTqsM61UeWPQ" name="Repository" represents="_HGRw0BKOEeeTqsM61UeWPQ" coveredBy="_QKmwsRKREeeTqsM61UeWPQ _QKnXwRKREeeTqsM61UeWPQ _QKnXwBKREeeTqsM61UeWPQ _x6M30BKREeeTqsM61UeWPQ _x6M30hKREeeTqsM61UeWPQ _x6M30RKREeeTqsM61UeWPQ _4PvBEBKSEeeTqsM61UeWPQ _4PvBEhKSEeeTqsM61UeWPQ _4PvBERKSEeeTqsM61UeWPQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_XAAXsRKQEeeTqsM61UeWPQ" name="getCandidatoConMasVotos_sender" covered="_JIo_QBKQEeeTqsM61UeWPQ" message="_W__JkBKQEeeTqsM61UeWPQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_XAA-wBKQEeeTqsM61UeWPQ" name="getCandidatoConMasVotos_receiver" covered="_JIo_QxKQEeeTqsM61UeWPQ" message="_W__JkBKQEeeTqsM61UeWPQ"/>
+    <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_XAA-whKQEeeTqsM61UeWPQ" name="getCandidatoConMasVotos" covered="_JIo_QxKQEeeTqsM61UeWPQ" finish="_XAA-wRKQEeeTqsM61UeWPQ" start="_XAA-wBKQEeeTqsM61UeWPQ" behavior="_W__woBKQEeeTqsM61UeWPQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_BXLYoBKREeeTqsM61UeWPQ" name="getCandidatoConMasVotos_sender" covered="_JIo_QxKQEeeTqsM61UeWPQ" message="_BXKKgBKREeeTqsM61UeWPQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_BXLYoRKREeeTqsM61UeWPQ" name="getCandidatoConMasVotos_receiver" covered="_JIo_QRKQEeeTqsM61UeWPQ" message="_BXKKgBKREeeTqsM61UeWPQ"/>
+    <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_BXLYoxKREeeTqsM61UeWPQ" name="getCandidatoConMasVotos" covered="_JIo_QRKQEeeTqsM61UeWPQ" finish="_BXLYohKREeeTqsM61UeWPQ" start="_BXLYoRKREeeTqsM61UeWPQ" behavior="_BXKKgRKREeeTqsM61UeWPQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_QKmwsBKREeeTqsM61UeWPQ" name="getVotos_sender" covered="_JIo_QRKQEeeTqsM61UeWPQ" message="_QKlikBKREeeTqsM61UeWPQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_QKmwsRKREeeTqsM61UeWPQ" name="getVotos_receiver" covered="_JIo_QhKQEeeTqsM61UeWPQ" message="_QKlikBKREeeTqsM61UeWPQ"/>
+    <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_QKnXwRKREeeTqsM61UeWPQ" name="getVotos" covered="_JIo_QhKQEeeTqsM61UeWPQ" finish="_QKnXwBKREeeTqsM61UeWPQ" start="_QKmwsRKREeeTqsM61UeWPQ" behavior="_QKmJoBKREeeTqsM61UeWPQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_QKnXwBKREeeTqsM61UeWPQ" name="getVotos_reply_sender" covered="_JIo_QhKQEeeTqsM61UeWPQ" message="_QKmJoRKREeeTqsM61UeWPQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_QKnXwhKREeeTqsM61UeWPQ" name="getVotos_reply_receiver" covered="_JIo_QRKQEeeTqsM61UeWPQ" message="_QKmJoRKREeeTqsM61UeWPQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_x6MQwRKREeeTqsM61UeWPQ" name="getCandidatos_sender" covered="_JIo_QRKQEeeTqsM61UeWPQ" message="_x6LpsBKREeeTqsM61UeWPQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_x6M30BKREeeTqsM61UeWPQ" name="getCandidatos_receiver" covered="_JIo_QhKQEeeTqsM61UeWPQ" message="_x6LpsBKREeeTqsM61UeWPQ"/>
+    <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_x6M30hKREeeTqsM61UeWPQ" name="getCandidatos" covered="_JIo_QhKQEeeTqsM61UeWPQ" finish="_x6M30RKREeeTqsM61UeWPQ" start="_x6M30BKREeeTqsM61UeWPQ" behavior="_x6LpsRKREeeTqsM61UeWPQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_x6M30RKREeeTqsM61UeWPQ" name="getCandidatos_reply_sender" covered="_JIo_QhKQEeeTqsM61UeWPQ" message="_x6MQwBKREeeTqsM61UeWPQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_x6M30xKREeeTqsM61UeWPQ" name="getCandidatos_reply_receiver" covered="_JIo_QRKQEeeTqsM61UeWPQ" message="_x6MQwBKREeeTqsM61UeWPQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_BXLYohKREeeTqsM61UeWPQ" name="getCandidatoConMasVotos_reply_sender" covered="_JIo_QRKQEeeTqsM61UeWPQ" message="_BXKxkBKREeeTqsM61UeWPQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_BXL_sBKREeeTqsM61UeWPQ" name="getCandidatoConMasVotos_reply_receiver" covered="_JIo_QxKQEeeTqsM61UeWPQ" message="_BXKxkBKREeeTqsM61UeWPQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_QfIZwRKSEeeTqsM61UeWPQ" name="getNombreCandidato_sender" covered="_JIo_QxKQEeeTqsM61UeWPQ" message="_QfHLoBKSEeeTqsM61UeWPQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_QfIZwhKSEeeTqsM61UeWPQ" name="getNombreCandidato_receiver" covered="_JIo_QRKQEeeTqsM61UeWPQ" message="_QfHLoBKSEeeTqsM61UeWPQ"/>
+    <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_QfJA0RKSEeeTqsM61UeWPQ" name="getNombreCandidato" covered="_JIo_QRKQEeeTqsM61UeWPQ" finish="_QfJA0BKSEeeTqsM61UeWPQ" start="_QfIZwhKSEeeTqsM61UeWPQ" behavior="_QfHysBKSEeeTqsM61UeWPQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_4PuaARKSEeeTqsM61UeWPQ" name="getCandidatos_sender" covered="_JIo_QRKQEeeTqsM61UeWPQ" message="_4Pty8BKSEeeTqsM61UeWPQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_4PvBEBKSEeeTqsM61UeWPQ" name="getCandidatos_receiver" covered="_JIo_QhKQEeeTqsM61UeWPQ" message="_4Pty8BKSEeeTqsM61UeWPQ"/>
+    <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_4PvBEhKSEeeTqsM61UeWPQ" name="getCandidatos" covered="_JIo_QhKQEeeTqsM61UeWPQ" finish="_4PvBERKSEeeTqsM61UeWPQ" start="_4PvBEBKSEeeTqsM61UeWPQ" behavior="_4Pty8RKSEeeTqsM61UeWPQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_4PvBERKSEeeTqsM61UeWPQ" name="getCandidatos_reply_sender" covered="_JIo_QhKQEeeTqsM61UeWPQ" message="_4PuaABKSEeeTqsM61UeWPQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_4PvBExKSEeeTqsM61UeWPQ" name="getCandidatos_reply_receiver" covered="_JIo_QRKQEeeTqsM61UeWPQ" message="_4PuaABKSEeeTqsM61UeWPQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_QfJA0BKSEeeTqsM61UeWPQ" name="getNombreCandidato_reply_sender" covered="_JIo_QRKQEeeTqsM61UeWPQ" message="_QfIZwBKSEeeTqsM61UeWPQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_QfJA0hKSEeeTqsM61UeWPQ" name="getNombreCandidato_reply_receiver" covered="_JIo_QxKQEeeTqsM61UeWPQ" message="_QfIZwBKSEeeTqsM61UeWPQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_XAA-wRKQEeeTqsM61UeWPQ" name="getCandidatoConMasVotos_reply_sender" covered="_JIo_QxKQEeeTqsM61UeWPQ" message="_XAAXsBKQEeeTqsM61UeWPQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_XAA-wxKQEeeTqsM61UeWPQ" name="getCandidatoConMasVotos_reply_receiver" covered="_JIo_QBKQEeeTqsM61UeWPQ" message="_XAAXsBKQEeeTqsM61UeWPQ"/>
+    <message xmi:id="_W__JkBKQEeeTqsM61UeWPQ" name="getCandidatoConMasVotos" receiveEvent="_XAA-wBKQEeeTqsM61UeWPQ" sendEvent="_XAAXsRKQEeeTqsM61UeWPQ" signature="_2Fz2QBKJEeeTqsM61UeWPQ"/>
+    <message xmi:id="_XAAXsBKQEeeTqsM61UeWPQ" name="Nombre Candidato" messageSort="reply" receiveEvent="_XAA-wxKQEeeTqsM61UeWPQ" sendEvent="_XAA-wRKQEeeTqsM61UeWPQ"/>
+    <message xmi:id="_BXKKgBKREeeTqsM61UeWPQ" name="getCandidatoConMasVotos" receiveEvent="_BXLYoRKREeeTqsM61UeWPQ" sendEvent="_BXLYoBKREeeTqsM61UeWPQ" signature="_2vpLgBKLEeeTqsM61UeWPQ"/>
+    <message xmi:id="_BXKxkBKREeeTqsM61UeWPQ" name="Id candidato" messageSort="reply" receiveEvent="_BXL_sBKREeeTqsM61UeWPQ" sendEvent="_BXLYohKREeeTqsM61UeWPQ"/>
+    <message xmi:id="_QKlikBKREeeTqsM61UeWPQ" name="getVotos" receiveEvent="_QKmwsRKREeeTqsM61UeWPQ" sendEvent="_QKmwsBKREeeTqsM61UeWPQ" signature="_RO_0oBKLEeeTqsM61UeWPQ"/>
+    <message xmi:id="_QKmJoRKREeeTqsM61UeWPQ" name="Todos los Votos" messageSort="reply" receiveEvent="_QKnXwhKREeeTqsM61UeWPQ" sendEvent="_QKnXwBKREeeTqsM61UeWPQ"/>
+    <message xmi:id="_x6LpsBKREeeTqsM61UeWPQ" name="getCandidatos" receiveEvent="_x6M30BKREeeTqsM61UeWPQ" sendEvent="_x6MQwRKREeeTqsM61UeWPQ" signature="_SBGnABKLEeeTqsM61UeWPQ"/>
+    <message xmi:id="_x6MQwBKREeeTqsM61UeWPQ" name="Todos los Candidatos" messageSort="reply" receiveEvent="_x6M30xKREeeTqsM61UeWPQ" sendEvent="_x6M30RKREeeTqsM61UeWPQ"/>
+    <message xmi:id="_QfHLoBKSEeeTqsM61UeWPQ" name="getNombreCandidato" receiveEvent="_QfIZwhKSEeeTqsM61UeWPQ" sendEvent="_QfIZwRKSEeeTqsM61UeWPQ" signature="_4yvrsBKLEeeTqsM61UeWPQ"/>
+    <message xmi:id="_QfIZwBKSEeeTqsM61UeWPQ" name="Nombre Candidato" messageSort="reply" receiveEvent="_QfJA0hKSEeeTqsM61UeWPQ" sendEvent="_QfJA0BKSEeeTqsM61UeWPQ"/>
+    <message xmi:id="_4Pty8BKSEeeTqsM61UeWPQ" name="getCandidatos" receiveEvent="_4PvBEBKSEeeTqsM61UeWPQ" sendEvent="_4PuaARKSEeeTqsM61UeWPQ" signature="_SBGnABKLEeeTqsM61UeWPQ"/>
+    <message xmi:id="_4PuaABKSEeeTqsM61UeWPQ" name="Todos los Candidatos" messageSort="reply" receiveEvent="_4PvBExKSEeeTqsM61UeWPQ" sendEvent="_4PvBERKSEeeTqsM61UeWPQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interaction" xmi:id="_5t2sQBKPEeeTqsM61UeWPQ" name="Votacion">
+    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_lq-3ARKTEeeTqsM61UeWPQ" name="getPartidoConMasVotosEnProvinicia"/>
+    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_SB6wQBKUEeeTqsM61UeWPQ" name="getIdProvincia"/>
+    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_anxLwRKUEeeTqsM61UeWPQ" name="getProvincias"/>
+    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_l4stcBKUEeeTqsM61UeWPQ" name="getPartidoConMasVotosEnProvinicia"/>
+    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_03m8wBKUEeeTqsM61UeWPQ" name="getVotos"/>
+    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_MeUvYBKVEeeTqsM61UeWPQ" name="getVotantes"/>
+    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_iJDWcBKVEeeTqsM61UeWPQ" name="getCandidatos"/>
+    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_yigRIBKVEeeTqsM61UeWPQ" name="getNombrePartido"/>
+    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_HLZnwRKWEeeTqsM61UeWPQ" name="getPartidos"/>
+    <lifeline xmi:id="_q0nfwRKSEeeTqsM61UeWPQ" name="Ejecutor" represents="_gm7dYBKKEeeTqsM61UeWPQ" coveredBy="_lq_eERKTEeeTqsM61UeWPQ _lrAFIxKTEeeTqsM61UeWPQ"/>
+    <lifeline xmi:id="_q0nfwhKSEeeTqsM61UeWPQ" name="VotacionController" represents="_jXaoABKKEeeTqsM61UeWPQ" coveredBy="_lrAFIBKTEeeTqsM61UeWPQ _lrAFIhKTEeeTqsM61UeWPQ _lrAFIRKTEeeTqsM61UeWPQ _SB7-YBKUEeeTqsM61UeWPQ _SB8lcBKUEeeTqsM61UeWPQ _l4tUgBKUEeeTqsM61UeWPQ _l4tUhBKUEeeTqsM61UeWPQ _yig4MBKVEeeTqsM61UeWPQ _yig4NBKVEeeTqsM61UeWPQ"/>
+    <lifeline xmi:id="_q0nfwxKSEeeTqsM61UeWPQ" name="RepositoryService" represents="_lF48ABKKEeeTqsM61UeWPQ" coveredBy="_SB7-YRKUEeeTqsM61UeWPQ _SB7-YxKUEeeTqsM61UeWPQ _SB7-YhKUEeeTqsM61UeWPQ _anxy0RKUEeeTqsM61UeWPQ _anyZ4xKUEeeTqsM61UeWPQ _l4tUgRKUEeeTqsM61UeWPQ _l4tUgxKUEeeTqsM61UeWPQ _l4tUghKUEeeTqsM61UeWPQ _03nj0BKUEeeTqsM61UeWPQ _03oK4BKUEeeTqsM61UeWPQ _MeVWcBKVEeeTqsM61UeWPQ _MeVWdBKVEeeTqsM61UeWPQ _iJD9gRKVEeeTqsM61UeWPQ _iJEkkxKVEeeTqsM61UeWPQ _yig4MRKVEeeTqsM61UeWPQ _yig4MxKVEeeTqsM61UeWPQ _yig4MhKVEeeTqsM61UeWPQ _HLaO0RKWEeeTqsM61UeWPQ _HLa14xKWEeeTqsM61UeWPQ"/>
+    <lifeline xmi:id="_q0nfwBKSEeeTqsM61UeWPQ" name="Repository" represents="_HGRw0BKOEeeTqsM61UeWPQ" coveredBy="_anyZ4BKUEeeTqsM61UeWPQ _anyZ4hKUEeeTqsM61UeWPQ _anyZ4RKUEeeTqsM61UeWPQ _03nj0RKUEeeTqsM61UeWPQ _03nj0xKUEeeTqsM61UeWPQ _03nj0hKUEeeTqsM61UeWPQ _MeVWcRKVEeeTqsM61UeWPQ _MeVWcxKVEeeTqsM61UeWPQ _MeVWchKVEeeTqsM61UeWPQ _iJEkkBKVEeeTqsM61UeWPQ _iJEkkhKVEeeTqsM61UeWPQ _iJEkkRKVEeeTqsM61UeWPQ _HLa14BKWEeeTqsM61UeWPQ _HLa14hKWEeeTqsM61UeWPQ _HLa14RKWEeeTqsM61UeWPQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_lq_eERKTEeeTqsM61UeWPQ" name="getPartidoConMasVotosEnProvinicia_sender" covered="_q0nfwRKSEeeTqsM61UeWPQ" message="_lq-3ABKTEeeTqsM61UeWPQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_lrAFIBKTEeeTqsM61UeWPQ" name="getPartidoConMasVotosEnProvinicia_receiver" covered="_q0nfwhKSEeeTqsM61UeWPQ" message="_lq-3ABKTEeeTqsM61UeWPQ"/>
+    <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_lrAFIhKTEeeTqsM61UeWPQ" name="getPartidoConMasVotosEnProvinicia" covered="_q0nfwhKSEeeTqsM61UeWPQ" finish="_lrAFIRKTEeeTqsM61UeWPQ" start="_lrAFIBKTEeeTqsM61UeWPQ" behavior="_lq-3ARKTEeeTqsM61UeWPQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_SB7-YBKUEeeTqsM61UeWPQ" name="getIdProvincia_sender" covered="_q0nfwhKSEeeTqsM61UeWPQ" message="_SB6JMBKUEeeTqsM61UeWPQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_SB7-YRKUEeeTqsM61UeWPQ" name="getIdProvincia_receiver" covered="_q0nfwxKSEeeTqsM61UeWPQ" message="_SB6JMBKUEeeTqsM61UeWPQ"/>
+    <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_SB7-YxKUEeeTqsM61UeWPQ" name="getIdProvincia" covered="_q0nfwxKSEeeTqsM61UeWPQ" finish="_SB7-YhKUEeeTqsM61UeWPQ" start="_SB7-YRKUEeeTqsM61UeWPQ" behavior="_SB6wQBKUEeeTqsM61UeWPQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_anxy0RKUEeeTqsM61UeWPQ" name="getProvincias_sender" covered="_q0nfwxKSEeeTqsM61UeWPQ" message="_anxLwBKUEeeTqsM61UeWPQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_anyZ4BKUEeeTqsM61UeWPQ" name="getProvincias_receiver" covered="_q0nfwBKSEeeTqsM61UeWPQ" message="_anxLwBKUEeeTqsM61UeWPQ"/>
+    <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_anyZ4hKUEeeTqsM61UeWPQ" name="getProvincias" covered="_q0nfwBKSEeeTqsM61UeWPQ" finish="_anyZ4RKUEeeTqsM61UeWPQ" start="_anyZ4BKUEeeTqsM61UeWPQ" behavior="_anxLwRKUEeeTqsM61UeWPQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_anyZ4RKUEeeTqsM61UeWPQ" name="getProvincias_reply_sender" covered="_q0nfwBKSEeeTqsM61UeWPQ" message="_anxy0BKUEeeTqsM61UeWPQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_anyZ4xKUEeeTqsM61UeWPQ" name="getProvincias_reply_receiver" covered="_q0nfwxKSEeeTqsM61UeWPQ" message="_anxy0BKUEeeTqsM61UeWPQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_SB7-YhKUEeeTqsM61UeWPQ" name="getIdProvincia_reply_sender" covered="_q0nfwxKSEeeTqsM61UeWPQ" message="_SB7XUBKUEeeTqsM61UeWPQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_SB8lcBKUEeeTqsM61UeWPQ" name="getIdProvincia_reply_receiver" covered="_q0nfwhKSEeeTqsM61UeWPQ" message="_SB7XUBKUEeeTqsM61UeWPQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_l4tUgBKUEeeTqsM61UeWPQ" name="getPartidoConMasVotosEnProvinicia_sender" covered="_q0nfwhKSEeeTqsM61UeWPQ" message="_l4sGYBKUEeeTqsM61UeWPQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_l4tUgRKUEeeTqsM61UeWPQ" name="getPartidoConMasVotosEnProvinicia_receiver" covered="_q0nfwxKSEeeTqsM61UeWPQ" message="_l4sGYBKUEeeTqsM61UeWPQ"/>
+    <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_l4tUgxKUEeeTqsM61UeWPQ" name="getPartidoConMasVotosEnProvinicia" covered="_q0nfwxKSEeeTqsM61UeWPQ" finish="_l4tUghKUEeeTqsM61UeWPQ" start="_l4tUgRKUEeeTqsM61UeWPQ" behavior="_l4stcBKUEeeTqsM61UeWPQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_03nj0BKUEeeTqsM61UeWPQ" name="getVotos_sender" covered="_q0nfwxKSEeeTqsM61UeWPQ" message="_03mVsBKUEeeTqsM61UeWPQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_03nj0RKUEeeTqsM61UeWPQ" name="getVotos_receiver" covered="_q0nfwBKSEeeTqsM61UeWPQ" message="_03mVsBKUEeeTqsM61UeWPQ"/>
+    <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_03nj0xKUEeeTqsM61UeWPQ" name="getVotos" covered="_q0nfwBKSEeeTqsM61UeWPQ" finish="_03nj0hKUEeeTqsM61UeWPQ" start="_03nj0RKUEeeTqsM61UeWPQ" behavior="_03m8wBKUEeeTqsM61UeWPQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_03nj0hKUEeeTqsM61UeWPQ" name="getVotos_reply_sender" covered="_q0nfwBKSEeeTqsM61UeWPQ" message="_03m8wRKUEeeTqsM61UeWPQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_03oK4BKUEeeTqsM61UeWPQ" name="getVotos_reply_receiver" covered="_q0nfwxKSEeeTqsM61UeWPQ" message="_03m8wRKUEeeTqsM61UeWPQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_MeVWcBKVEeeTqsM61UeWPQ" name="getVotantes_sender" covered="_q0nfwxKSEeeTqsM61UeWPQ" message="_MeUIUBKVEeeTqsM61UeWPQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_MeVWcRKVEeeTqsM61UeWPQ" name="getVotantes_receiver" covered="_q0nfwBKSEeeTqsM61UeWPQ" message="_MeUIUBKVEeeTqsM61UeWPQ"/>
+    <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_MeVWcxKVEeeTqsM61UeWPQ" name="getVotantes" covered="_q0nfwBKSEeeTqsM61UeWPQ" finish="_MeVWchKVEeeTqsM61UeWPQ" start="_MeVWcRKVEeeTqsM61UeWPQ" behavior="_MeUvYBKVEeeTqsM61UeWPQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_MeVWchKVEeeTqsM61UeWPQ" name="getVotantes_reply_sender" covered="_q0nfwBKSEeeTqsM61UeWPQ" message="_MeUvYRKVEeeTqsM61UeWPQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_MeVWdBKVEeeTqsM61UeWPQ" name="getVotantes_reply_receiver" covered="_q0nfwxKSEeeTqsM61UeWPQ" message="_MeUvYRKVEeeTqsM61UeWPQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_iJD9gRKVEeeTqsM61UeWPQ" name="getCandidatos_sender" covered="_q0nfwxKSEeeTqsM61UeWPQ" message="_iJCvYBKVEeeTqsM61UeWPQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_iJEkkBKVEeeTqsM61UeWPQ" name="getCandidatos_receiver" covered="_q0nfwBKSEeeTqsM61UeWPQ" message="_iJCvYBKVEeeTqsM61UeWPQ"/>
+    <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_iJEkkhKVEeeTqsM61UeWPQ" name="getCandidatos" covered="_q0nfwBKSEeeTqsM61UeWPQ" finish="_iJEkkRKVEeeTqsM61UeWPQ" start="_iJEkkBKVEeeTqsM61UeWPQ" behavior="_iJDWcBKVEeeTqsM61UeWPQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_iJEkkRKVEeeTqsM61UeWPQ" name="getCandidatos_reply_sender" covered="_q0nfwBKSEeeTqsM61UeWPQ" message="_iJD9gBKVEeeTqsM61UeWPQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_iJEkkxKVEeeTqsM61UeWPQ" name="getCandidatos_reply_receiver" covered="_q0nfwxKSEeeTqsM61UeWPQ" message="_iJD9gBKVEeeTqsM61UeWPQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_l4tUghKUEeeTqsM61UeWPQ" name="getPartidoConMasVotosEnProvinicia_reply_sender" covered="_q0nfwxKSEeeTqsM61UeWPQ" message="_l4stcRKUEeeTqsM61UeWPQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_l4tUhBKUEeeTqsM61UeWPQ" name="getPartidoConMasVotosEnProvinicia_reply_receiver" covered="_q0nfwhKSEeeTqsM61UeWPQ" message="_l4stcRKUEeeTqsM61UeWPQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_yig4MBKVEeeTqsM61UeWPQ" name="getNombrePartido_sender" covered="_q0nfwhKSEeeTqsM61UeWPQ" message="_yifqEBKVEeeTqsM61UeWPQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_yig4MRKVEeeTqsM61UeWPQ" name="getNombrePartido_receiver" covered="_q0nfwxKSEeeTqsM61UeWPQ" message="_yifqEBKVEeeTqsM61UeWPQ"/>
+    <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_yig4MxKVEeeTqsM61UeWPQ" name="getNombrePartido" covered="_q0nfwxKSEeeTqsM61UeWPQ" finish="_yig4MhKVEeeTqsM61UeWPQ" start="_yig4MRKVEeeTqsM61UeWPQ" behavior="_yigRIBKVEeeTqsM61UeWPQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_HLaO0RKWEeeTqsM61UeWPQ" name="getPartidos_sender" covered="_q0nfwxKSEeeTqsM61UeWPQ" message="_HLZnwBKWEeeTqsM61UeWPQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_HLa14BKWEeeTqsM61UeWPQ" name="getPartidos_receiver" covered="_q0nfwBKSEeeTqsM61UeWPQ" message="_HLZnwBKWEeeTqsM61UeWPQ"/>
+    <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_HLa14hKWEeeTqsM61UeWPQ" name="getPartidos" covered="_q0nfwBKSEeeTqsM61UeWPQ" finish="_HLa14RKWEeeTqsM61UeWPQ" start="_HLa14BKWEeeTqsM61UeWPQ" behavior="_HLZnwRKWEeeTqsM61UeWPQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_HLa14RKWEeeTqsM61UeWPQ" name="getPartidos_reply_sender" covered="_q0nfwBKSEeeTqsM61UeWPQ" message="_HLaO0BKWEeeTqsM61UeWPQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_HLa14xKWEeeTqsM61UeWPQ" name="getPartidos_reply_receiver" covered="_q0nfwxKSEeeTqsM61UeWPQ" message="_HLaO0BKWEeeTqsM61UeWPQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_yig4MhKVEeeTqsM61UeWPQ" name="getNombrePartido_reply_sender" covered="_q0nfwxKSEeeTqsM61UeWPQ" message="_yigRIRKVEeeTqsM61UeWPQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_yig4NBKVEeeTqsM61UeWPQ" name="getNombrePartido_reply_receiver" covered="_q0nfwhKSEeeTqsM61UeWPQ" message="_yigRIRKVEeeTqsM61UeWPQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_lrAFIRKTEeeTqsM61UeWPQ" name="getPartidoConMasVotosEnProvinicia_reply_sender" covered="_q0nfwhKSEeeTqsM61UeWPQ" message="_lq_eEBKTEeeTqsM61UeWPQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_lrAFIxKTEeeTqsM61UeWPQ" name="getPartidoConMasVotosEnProvinicia_reply_receiver" covered="_q0nfwRKSEeeTqsM61UeWPQ" message="_lq_eEBKTEeeTqsM61UeWPQ"/>
+    <message xmi:id="_lq-3ABKTEeeTqsM61UeWPQ" name="getPartidoConMasVotosEnProvinicia" receiveEvent="_lrAFIBKTEeeTqsM61UeWPQ" sendEvent="_lq_eERKTEeeTqsM61UeWPQ" signature="_WFnrsBKTEeeTqsM61UeWPQ"/>
+    <message xmi:id="_lq_eEBKTEeeTqsM61UeWPQ" name="Nombre Partido" messageSort="reply" receiveEvent="_lrAFIxKTEeeTqsM61UeWPQ" sendEvent="_lrAFIRKTEeeTqsM61UeWPQ"/>
+    <message xmi:id="_SB6JMBKUEeeTqsM61UeWPQ" name="getIdProvincia" receiveEvent="_SB7-YRKUEeeTqsM61UeWPQ" sendEvent="_SB7-YBKUEeeTqsM61UeWPQ" signature="_6Jwh8BKLEeeTqsM61UeWPQ"/>
+    <message xmi:id="_SB7XUBKUEeeTqsM61UeWPQ" name="Id Provincia" messageSort="reply" receiveEvent="_SB8lcBKUEeeTqsM61UeWPQ" sendEvent="_SB7-YhKUEeeTqsM61UeWPQ"/>
+    <message xmi:id="_anxLwBKUEeeTqsM61UeWPQ" name="getProvincias" receiveEvent="_anyZ4BKUEeeTqsM61UeWPQ" sendEvent="_anxy0RKUEeeTqsM61UeWPQ" signature="_NrAJcBKLEeeTqsM61UeWPQ"/>
+    <message xmi:id="_anxy0BKUEeeTqsM61UeWPQ" name="Lista Provincias" messageSort="reply" receiveEvent="_anyZ4xKUEeeTqsM61UeWPQ" sendEvent="_anyZ4RKUEeeTqsM61UeWPQ"/>
+    <message xmi:id="_l4sGYBKUEeeTqsM61UeWPQ" name="getPartidoConMasVotosEnProvinicia" receiveEvent="_l4tUgRKUEeeTqsM61UeWPQ" sendEvent="_l4tUgBKUEeeTqsM61UeWPQ" signature="_3YhwcBKLEeeTqsM61UeWPQ"/>
+    <message xmi:id="_l4stcRKUEeeTqsM61UeWPQ" name="Id Partido" messageSort="reply" receiveEvent="_l4tUhBKUEeeTqsM61UeWPQ" sendEvent="_l4tUghKUEeeTqsM61UeWPQ"/>
+    <message xmi:id="_03mVsBKUEeeTqsM61UeWPQ" name="getVotos" receiveEvent="_03nj0RKUEeeTqsM61UeWPQ" sendEvent="_03nj0BKUEeeTqsM61UeWPQ" signature="_RO_0oBKLEeeTqsM61UeWPQ"/>
+    <message xmi:id="_03m8wRKUEeeTqsM61UeWPQ" name="Lista Votos" messageSort="reply" receiveEvent="_03oK4BKUEeeTqsM61UeWPQ" sendEvent="_03nj0hKUEeeTqsM61UeWPQ"/>
+    <message xmi:id="_MeUIUBKVEeeTqsM61UeWPQ" name="getVotantes" receiveEvent="_MeVWcRKVEeeTqsM61UeWPQ" sendEvent="_MeVWcBKVEeeTqsM61UeWPQ" signature="_QLLnMBKLEeeTqsM61UeWPQ"/>
+    <message xmi:id="_MeUvYRKVEeeTqsM61UeWPQ" name="Lista Votantes" messageSort="reply" receiveEvent="_MeVWdBKVEeeTqsM61UeWPQ" sendEvent="_MeVWchKVEeeTqsM61UeWPQ"/>
+    <message xmi:id="_iJCvYBKVEeeTqsM61UeWPQ" name="getCandidatos" receiveEvent="_iJEkkBKVEeeTqsM61UeWPQ" sendEvent="_iJD9gRKVEeeTqsM61UeWPQ" signature="_SBGnABKLEeeTqsM61UeWPQ"/>
+    <message xmi:id="_iJD9gBKVEeeTqsM61UeWPQ" name="Lista Candidatos" messageSort="reply" receiveEvent="_iJEkkxKVEeeTqsM61UeWPQ" sendEvent="_iJEkkRKVEeeTqsM61UeWPQ"/>
+    <message xmi:id="_yifqEBKVEeeTqsM61UeWPQ" name="getNombrePartido" receiveEvent="_yig4MRKVEeeTqsM61UeWPQ" sendEvent="_yig4MBKVEeeTqsM61UeWPQ" signature="_5bIhYBKLEeeTqsM61UeWPQ"/>
+    <message xmi:id="_yigRIRKVEeeTqsM61UeWPQ" name="Nombre Partido" messageSort="reply" receiveEvent="_yig4NBKVEeeTqsM61UeWPQ" sendEvent="_yig4MhKVEeeTqsM61UeWPQ"/>
+    <message xmi:id="_HLZnwBKWEeeTqsM61UeWPQ" name="getPartidos" receiveEvent="_HLa14BKWEeeTqsM61UeWPQ" sendEvent="_HLaO0RKWEeeTqsM61UeWPQ" signature="_S-bK4BKLEeeTqsM61UeWPQ"/>
+    <message xmi:id="_HLaO0BKWEeeTqsM61UeWPQ" name="Lista Partidos" messageSort="reply" receiveEvent="_HLa14xKWEeeTqsM61UeWPQ" sendEvent="_HLa14RKWEeeTqsM61UeWPQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="__lZhoBNDEeeZW9eY3o1b2g" memberEnd="__laIsBNDEeeZW9eY3o1b2g __ldMARNDEeeZW9eY3o1b2g" navigableOwnedEnd="__ldMARNDEeeZW9eY3o1b2g">
+    <ownedEnd xmi:id="__laIsBNDEeeZW9eY3o1b2g" name="repositorys" type="_cvg5ABJgEeeTqsM61UeWPQ" association="__lZhoBNDEeeZW9eY3o1b2g">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="__lck8BNDEeeZW9eY3o1b2g"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="__ldMABNDEeeZW9eY3o1b2g" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="__ldMARNDEeeZW9eY3o1b2g" name="votos" type="_4JN1EBJgEeeTqsM61UeWPQ" aggregation="composite" association="__lZhoBNDEeeZW9eY3o1b2g">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="__ldzEBNDEeeZW9eY3o1b2g"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="__ldzERNDEeeZW9eY3o1b2g" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_ERmyEBNEEeeZW9eY3o1b2g" memberEnd="_ERmyERNEEeeZW9eY3o1b2g _ERnZIhNEEeeZW9eY3o1b2g" navigableOwnedEnd="_ERnZIhNEEeeZW9eY3o1b2g">
+    <ownedEnd xmi:id="_ERmyERNEEeeZW9eY3o1b2g" name="repositorys" type="_cvg5ABJgEeeTqsM61UeWPQ" association="_ERmyEBNEEeeZW9eY3o1b2g">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ERnZIBNEEeeZW9eY3o1b2g"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ERnZIRNEEeeZW9eY3o1b2g" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_ERnZIhNEEeeZW9eY3o1b2g" name="votantes" type="_5X_8YBJgEeeTqsM61UeWPQ" aggregation="composite" association="_ERmyEBNEEeeZW9eY3o1b2g">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ERoAMBNEEeeZW9eY3o1b2g"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ERoAMRNEEeeZW9eY3o1b2g" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_G9tL8BNEEeeZW9eY3o1b2g" memberEnd="_G9tzABNEEeeZW9eY3o1b2g _G9uaEBNEEeeZW9eY3o1b2g" navigableOwnedEnd="_G9uaEBNEEeeZW9eY3o1b2g">
+    <ownedEnd xmi:id="_G9tzABNEEeeZW9eY3o1b2g" name="repositorys" type="_cvg5ABJgEeeTqsM61UeWPQ" association="_G9tL8BNEEeeZW9eY3o1b2g">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_G9tzARNEEeeZW9eY3o1b2g"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_G9tzAhNEEeeZW9eY3o1b2g" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_G9uaEBNEEeeZW9eY3o1b2g" name="partidos" type="_0m16gBJgEeeTqsM61UeWPQ" aggregation="composite" association="_G9tL8BNEEeeZW9eY3o1b2g">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_G9uaERNEEeeZW9eY3o1b2g"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_G9uaEhNEEeeZW9eY3o1b2g" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_KnTI0BNEEeeZW9eY3o1b2g" name="A_repositorys_provincias" memberEnd="_KnTI0RNEEeeZW9eY3o1b2g _KnUW8BNEEeeZW9eY3o1b2g" navigableOwnedEnd="_KnUW8BNEEeeZW9eY3o1b2g">
+    <ownedEnd xmi:id="_KnTI0RNEEeeZW9eY3o1b2g" name="repositorys" type="_cvg5ABJgEeeTqsM61UeWPQ" association="_KnTI0BNEEeeZW9eY3o1b2g">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_KnTI0hNEEeeZW9eY3o1b2g"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_KnTv4BNEEeeZW9eY3o1b2g" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_KnUW8BNEEeeZW9eY3o1b2g" name="provincias" type="_9OrTABJgEeeTqsM61UeWPQ" aggregation="composite" association="_KnTI0BNEEeeZW9eY3o1b2g">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_KnUW8RNEEeeZW9eY3o1b2g"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_KnUW8hNEEeeZW9eY3o1b2g" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_LslV4BNEEeeZW9eY3o1b2g" memberEnd="_LslV4RNEEeeZW9eY3o1b2g _LsmkABNEEeeZW9eY3o1b2g" navigableOwnedEnd="_LsmkABNEEeeZW9eY3o1b2g">
+    <ownedEnd xmi:id="_LslV4RNEEeeZW9eY3o1b2g" name="repositorys" type="_cvg5ABJgEeeTqsM61UeWPQ" association="_LslV4BNEEeeZW9eY3o1b2g">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Lsl88BNEEeeZW9eY3o1b2g"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Lsl88RNEEeeZW9eY3o1b2g" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_LsmkABNEEeeZW9eY3o1b2g" name="candidatos" type="_6oD2EBJgEeeTqsM61UeWPQ" aggregation="composite" association="_LslV4BNEEeeZW9eY3o1b2g">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_LsmkARNEEeeZW9eY3o1b2g"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_LsmkAhNEEeeZW9eY3o1b2g" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+</uml:Model>
