@@ -17,5 +17,3 @@ Eliminar archivos que no hacen a la solucion del problema (en repositorio compar
 
 Considero que es mejor que exista un archivo de Test por metodo a probar y no un solo
 archivo con el nombre que se pidio, ya que es mas entendible.
-
-Eliminar clases Foo
