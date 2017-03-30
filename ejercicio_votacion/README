@@ -1,0 +1,19 @@
+Array generados para hacer calculo del ganador en pais y calculo de partido 
+ganador en provincia puede ser reemplazado por un Map<>. ya que el array da poca 
+flexibilidad en cuanto a que todos los id de candidatos deberian empezar del 1 al N 
+sin saltear ningun numero en el medio.
+
+El voto guarda la persona, que voto para poder realizarse el calculo de ganador por
+provincia. Podria modificarse para que no lo haga, aunque el ejercicio no especificaba
+que el voto deberia ser "anonimo".
+
+Las clases como Repository o RepositoryService, aunque en parte representan una posible
+futura comunicacion con un repositorio (como una BDD) y clases de servicio para 
+acceder a las entidades de esta, deben ser renombradas a clases que representen mejor
+lo que estan haciendo hoy en dia y tengan mas sentido en el contexto de nuestro modelo 
+actual.
+
+Eliminar archivos que no hacen a la solucion del problema (en repositorio compartido).
+
+Considero que es mejor que exista un archivo de Test por metodo a probar y no un solo
+archivo con el nombre que se pidio, ya que es mas entendible.
