@@ -7,12 +7,6 @@ El voto guarda la persona, que voto para poder realizarse el calculo de ganador 
 provincia. Podria modificarse para que no lo haga, aunque el ejercicio no especificaba
 que el voto deberia ser "anonimo".
 
-Las clases como Repository o RepositoryService, aunque en parte representan una posible
-futura comunicacion con un repositorio (como una BDD) y clases de servicio para 
-acceder a las entidades de esta, deben ser renombradas a clases que representen mejor
-lo que estan haciendo hoy en dia y tengan mas sentido en el contexto de nuestro modelo 
-actual.
-
 Eliminar archivos que no hacen a la solucion del problema (en repositorio compartido).
 
 Considero que es mejor que exista un archivo de Test por metodo a probar y no un solo
