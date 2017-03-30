@@ -1,6 +1,6 @@
 package ar.edu.untref.aydoo.entities;
 
-public class Votante extends Entity {
+public class Votante extends Entidad {
 	
 	private int idProvincia;
 

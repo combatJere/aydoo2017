@@ -1,11 +1,11 @@
 package ar.edu.untref.aydoo.entities;
 
-public class Entity {
+public class Entidad {
 	
 	private int id;
 	private String nombre;
 
-	public Entity(int id, String nombre){
+	public Entidad(int id, String nombre){
 		this.id = id;
 		this.setNombre(nombre);
 	}
