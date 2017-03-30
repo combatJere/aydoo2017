@@ -12,7 +12,7 @@ public class getPartidoConMasVotosEnProvinciaTest {
 	public void PartidoConMasVotosEnProvinciaTest() {
 		DatosElectorales.getInstance().getVotos().clear();
 		
-		VotacionController votacionController = new VotacionController();		
+		Votaciones votacionController = new Votaciones();		
 		votacionController.emitirVoto(1, 1);
 		votacionController.emitirVoto(3, 2);
 		votacionController.emitirVoto(4, 3);

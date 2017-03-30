@@ -3,11 +3,11 @@ package ar.edu.untref.aydoo;
 import ar.edu.untref.aydoo.entities.Voto;
 import ar.edu.untref.aydoo.repository.ConsultorDatosElectorales;
 
-public class VotacionController {
+public class Votaciones {
 	
 	private ConsultorDatosElectorales repositoryService;
 	
-	public VotacionController(){
+	public Votaciones(){
 		repositoryService = new ConsultorDatosElectorales();
 	}
 

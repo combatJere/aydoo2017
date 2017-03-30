@@ -11,7 +11,7 @@ public class getCandidatoConMasVotosTest {
 	public void getCandidatoConMasVotosExito() {
 		DatosElectorales.getInstance().getVotos().clear();
 		
-		VotacionController votacionController = new VotacionController();		
+		Votaciones votacionController = new Votaciones();		
 		votacionController.emitirVoto(1, 1);
 		votacionController.emitirVoto(2, 1);
 		votacionController.emitirVoto(3, 2);

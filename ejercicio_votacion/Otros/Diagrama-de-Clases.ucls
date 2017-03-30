@@ -2,9 +2,8 @@
 <class-diagram version="1.1.14" icons="true" automaticImage="PNG" always-add-relationships="false" 
   generalizations="true" realizations="true" associations="true" dependencies="false" nesting-relationships="true" 
   router="FAN">  
-  <class id="1" language="java" name="ar.edu.untref.aydoo.VotacionController" project="Votacion_Ejercicio" 
-    file="/Votacion_Ejercicio/src/main/java/ar/edu/untref/aydoo/VotacionController.java" binary="false" 
-    corner="BOTTOM_RIGHT">    
+  <class id="1" language="java" name="ar.edu.untref.aydoo.Votaciones" project="Votacion_Ejercicio" 
+    file="/Votacion_Ejercicio/src/main/java/ar/edu/untref/aydoo/Votaciones.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="168" y="79"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      

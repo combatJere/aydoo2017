@@ -13,7 +13,7 @@ public class EmitirVotoTest {
 		
 		int cantidadDeVotosAntes = DatosElectorales.getInstance().getVotos().size();
 		
-		VotacionController votacionController = new VotacionController();		
+		Votaciones votacionController = new Votaciones();		
 		votacionController.emitirVoto(2, 3);
 		
 		int cantidadDeVotosDespues = DatosElectorales.getInstance().getVotos().size();
