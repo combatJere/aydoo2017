@@ -1,7 +1,6 @@
-Array generados para hacer calculo del ganador en pais y calculo de partido 
-ganador en provincia puede ser reemplazado por un Map<>. ya que el array da poca 
-flexibilidad en cuanto a que todos los id de candidatos deberian empezar del 1 al N 
-sin saltear ningun numero en el medio.
+Se puede buscar un metodo que resuelva tanto lo del metodo 
+crearMapCandidatoConCantidadVotos como lo del metodo crearMapPartidoConCantidadVotos
+ya que cumplpen practicamente la misma funcion.
 
 El voto guarda la persona, que voto para poder realizarse el calculo de ganador por
 provincia. Podria modificarse para que no lo haga, aunque el ejercicio no especificaba

@@ -1,9 +1,9 @@
 package ar.edu.untref.aydoo.repository;
 
-import java.util.Arrays;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.LinkedList;
-import java.util.OptionalInt;
+import java.util.Map;
 import ar.edu.untref.aydoo.entities.Candidato;
 import ar.edu.untref.aydoo.entities.Partido;
 import ar.edu.untref.aydoo.entities.Provincia;
@@ -17,22 +17,23 @@ public class ConsultorDatosElectorales {
 		listaVotos.add(voto);
 	}
 
-	public int getCandidatoConMasVotos() {
+	public int getCandidatoConMasVotos() {		
 		LinkedList<Voto> listaVotos = DatosElectorales.getInstance().getVotos();
 
-		int[] votosPorCandidato = new int[this.getCantidadDeCandidatos() + 1];
+		HashMap<Integer,Integer> candidatoCantidadVotos = this.crearMapCandidatoConCantidadVotos();
 
 		for (Voto voto : listaVotos) {
-			votosPorCandidato[voto.getIdcandidato()]++;
+			int cantidadActualVotos = candidatoCantidadVotos.get(voto.getIdcandidato()) + 1;
+			candidatoCantidadVotos.put(voto.getIdcandidato(), cantidadActualVotos++);
 		}
 
-		return this.obtenerIdDelMaximo(votosPorCandidato);
+		return this.obtenerIdDelMaximo(candidatoCantidadVotos);
 	}
 
 	public int getPartidoConMasVotosEnProvincia(int idProvincia) {
 		LinkedList<Voto> listaVotos = DatosElectorales.getInstance().getVotos();
 
-		int[] votosPorPartido = new int[this.getCantidadDePartidos() + 1];
+		HashMap<Integer,Integer> partidoCantidadVotos = this.crearMapPartidoConCantidadVotos();
 
 		Iterator<Voto> itVotos = listaVotos.iterator();
 
@@ -42,11 +43,12 @@ public class ConsultorDatosElectorales {
 			voto = itVotos.next();
 			if (this.getProvinciaVotante(voto.getIdVotante()) == idProvincia) {
 				int idPartidoCandidato = this.getPartidoCandidato(voto.getIdcandidato());
-				votosPorPartido[idPartidoCandidato]++;
+				int cantidadActualVotos = partidoCantidadVotos.get(idPartidoCandidato) + 1;
+				partidoCantidadVotos.put(idPartidoCandidato, cantidadActualVotos++);
 			}
 		}
 
-		return this.obtenerIdDelMaximo(votosPorPartido);
+		return this.obtenerIdDelMaximo(partidoCantidadVotos);
 	}
 
 	public String getNombreCandidato(int idCandidato) {
@@ -79,24 +81,38 @@ public class ConsultorDatosElectorales {
 		return 0;
 	}
 
-	private int getCantidadDeCandidatos() {
-		return DatosElectorales.getInstance().getCandidatos().size();
-	}
-
-	private int getCantidadDePartidos() {
-		return DatosElectorales.getInstance().getPartidos().size();
-	}
-
-	private int obtenerIdDelMaximo(int[] array) {
-		OptionalInt maximoVotos = Arrays.stream(array).max();
-
-		for (int idEntidad = 1; idEntidad < array.length; idEntidad++) {
-			if (array[idEntidad] == maximoVotos.getAsInt()) {
-				return idEntidad;
-			}
+	private HashMap<Integer,Integer> crearMapCandidatoConCantidadVotos(){
+		LinkedList<Candidato> listaCandidatos = DatosElectorales.getInstance().getCandidatos();
+		HashMap<Integer,Integer> candidatoCantidadVotos = new HashMap<>();
+		
+		for (Candidato candidato : listaCandidatos) {
+			candidatoCantidadVotos.put(candidato.getId(), 0);
 		}
+		return candidatoCantidadVotos;
+	}
+	
+	private HashMap<Integer,Integer> crearMapPartidoConCantidadVotos(){
+		LinkedList<Partido> listaPartidos = DatosElectorales.getInstance().getPartidos();
+		HashMap<Integer,Integer> partidoCantidadVotos = new HashMap<>();
+		
+		for (Partido partido : listaPartidos) {
+			partidoCantidadVotos.put(partido.getId(), 0);
+		}
+		return partidoCantidadVotos;
+	}
+	
+	private int obtenerIdDelMaximo(HashMap<Integer,Integer> idConvotos){
+		Map.Entry<Integer, Integer> maxEntry = null;
 
-		return 0;
+		for (Map.Entry<Integer, Integer> entry : idConvotos.entrySet())
+		{
+		    if (maxEntry == null || entry.getValue().compareTo(maxEntry.getValue()) > 0)
+		    {
+		        maxEntry = entry;
+		    }
+		}
+		
+		return maxEntry.getKey();
 	}
 
 	private int getProvinciaVotante(int idVotante) {

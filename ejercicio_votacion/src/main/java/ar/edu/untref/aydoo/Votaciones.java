@@ -5,29 +5,29 @@ import ar.edu.untref.aydoo.repository.ConsultorDatosElectorales;
 
 public class Votaciones {
 	
-	private ConsultorDatosElectorales repositoryService;
+	private ConsultorDatosElectorales consultorDatos;
 	
 	public Votaciones(){
-		repositoryService = new ConsultorDatosElectorales();
+		consultorDatos = new ConsultorDatosElectorales();
 	}
 
 	public void emitirVoto(int idVotante, int idCandidato){
 		Voto voto = new Voto(idVotante, idCandidato);
-		repositoryService.agregarVoto(voto);
+		consultorDatos.agregarVoto(voto);
 	}
 	
 	public String getCandidatoConMasVotos(){
-		int idCandidato =  repositoryService.getCandidatoConMasVotos();
-		return repositoryService.getNombreCandidato(idCandidato);
+		int idCandidato =  consultorDatos.getCandidatoConMasVotos();
+		return consultorDatos.getNombreCandidato(idCandidato);
 	}
 	
 	public String getPartidoConMasVotosEnProvincia(int idProvincia){
-		int idPartido = repositoryService.getPartidoConMasVotosEnProvincia(idProvincia);
-		return repositoryService.getNombrePartido(idPartido);
+		int idPartido = consultorDatos.getPartidoConMasVotosEnProvincia(idProvincia);
+		return consultorDatos.getNombrePartido(idPartido);
 	}
 	
 	public String getPartidoConMasVotosEnProvincia(String nombreProvincia){
-		int idProvincia = repositoryService.getIdProvincia(nombreProvincia);
+		int idProvincia = consultorDatos.getIdProvincia(nombreProvincia);
 		return this.getPartidoConMasVotosEnProvincia(idProvincia);
 	}
 }
