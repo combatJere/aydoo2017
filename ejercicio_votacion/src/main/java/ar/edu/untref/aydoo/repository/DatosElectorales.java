@@ -8,9 +8,9 @@ import ar.edu.untref.aydoo.entities.Provincia;
 import ar.edu.untref.aydoo.entities.Votante;
 import ar.edu.untref.aydoo.entities.Voto;
 
-public class Repository {
+public class DatosElectorales {
 
-	private static Repository repository;
+	private static DatosElectorales repository;
 
 	private LinkedList<Voto> votos;
 	private LinkedList<Provincia> provincias;
@@ -18,7 +18,7 @@ public class Repository {
 	private LinkedList<Candidato> candidatos;
 	private LinkedList<Partido> partidos;
 
-	private Repository() {
+	private DatosElectorales() {
 
 		this.votos = new LinkedList<Voto>();
 
@@ -47,9 +47,9 @@ public class Repository {
 		this.partidos.add(new Partido(2, "Cambiemos"));
 	}
 
-	public static Repository getInstance() {
+	public static DatosElectorales getInstance() {
 		if (repository == null) {
-			repository = new Repository();
+			repository = new DatosElectorales();
 		}
 		return repository;
 	}

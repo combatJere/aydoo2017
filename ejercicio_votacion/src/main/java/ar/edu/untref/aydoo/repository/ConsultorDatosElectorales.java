@@ -10,15 +10,15 @@ import ar.edu.untref.aydoo.entities.Provincia;
 import ar.edu.untref.aydoo.entities.Votante;
 import ar.edu.untref.aydoo.entities.Voto;
 
-public class RepositoryService {
+public class ConsultorDatosElectorales {
 
 	public void agregarVoto(Voto voto) {
-		LinkedList<Voto> listaVotos = Repository.getInstance().getVotos();
+		LinkedList<Voto> listaVotos = DatosElectorales.getInstance().getVotos();
 		listaVotos.add(voto);
 	}
 
 	public int getCandidatoConMasVotos() {
-		LinkedList<Voto> listaVotos = Repository.getInstance().getVotos();
+		LinkedList<Voto> listaVotos = DatosElectorales.getInstance().getVotos();
 
 		int[] votosPorCandidato = new int[this.getCantidadDeCandidatos() + 1];
 
@@ -30,7 +30,7 @@ public class RepositoryService {
 	}
 
 	public int getPartidoConMasVotosEnProvincia(int idProvincia) {
-		LinkedList<Voto> listaVotos = Repository.getInstance().getVotos();
+		LinkedList<Voto> listaVotos = DatosElectorales.getInstance().getVotos();
 
 		int[] votosPorPartido = new int[this.getCantidadDePartidos() + 1];
 
@@ -50,7 +50,7 @@ public class RepositoryService {
 	}
 
 	public String getNombreCandidato(int idCandidato) {
-		LinkedList<Candidato> listaCandidatos = Repository.getInstance().getCandidatos();
+		LinkedList<Candidato> listaCandidatos = DatosElectorales.getInstance().getCandidatos();
 		for (Candidato candidato : listaCandidatos) {
 			if (candidato.getId() == idCandidato) {
 				return candidato.getNombre();
@@ -60,7 +60,7 @@ public class RepositoryService {
 	}
 
 	public String getNombrePartido(int idPartido) {
-		LinkedList<Partido> listaPartidos = Repository.getInstance().getPartidos();
+		LinkedList<Partido> listaPartidos = DatosElectorales.getInstance().getPartidos();
 		for (Partido partido : listaPartidos) {
 			if (partido.getId() == idPartido) {
 				return partido.getNombre();
@@ -70,7 +70,7 @@ public class RepositoryService {
 	}
 	
 	public int getIdProvincia(String nombreProvincia) {
-		LinkedList<Provincia> listaProvincias = Repository.getInstance().getProvincias();
+		LinkedList<Provincia> listaProvincias = DatosElectorales.getInstance().getProvincias();
 		for (Provincia provincia : listaProvincias) {
 			if (provincia.getNombre() == nombreProvincia) {
 				return provincia.getId();
@@ -80,11 +80,11 @@ public class RepositoryService {
 	}
 
 	private int getCantidadDeCandidatos() {
-		return Repository.getInstance().getCandidatos().size();
+		return DatosElectorales.getInstance().getCandidatos().size();
 	}
 
 	private int getCantidadDePartidos() {
-		return Repository.getInstance().getPartidos().size();
+		return DatosElectorales.getInstance().getPartidos().size();
 	}
 
 	private int obtenerIdDelMaximo(int[] array) {
@@ -100,7 +100,7 @@ public class RepositoryService {
 	}
 
 	private int getProvinciaVotante(int idVotante) {
-		LinkedList<Votante> listaVotantes = Repository.getInstance().getVotantes();
+		LinkedList<Votante> listaVotantes = DatosElectorales.getInstance().getVotantes();
 		for (Votante votante : listaVotantes) {
 			if (votante.getId() == idVotante) {
 				return votante.getIdProvincia();
@@ -110,7 +110,7 @@ public class RepositoryService {
 	}
 
 	private int getPartidoCandidato(int idCandidato) {
-		LinkedList<Candidato> listaCandidatos = Repository.getInstance().getCandidatos();
+		LinkedList<Candidato> listaCandidatos = DatosElectorales.getInstance().getCandidatos();
 		for (Candidato candidato : listaCandidatos) {
 			if (candidato.getId() == idCandidato) {
 				return candidato.getIdPartido();

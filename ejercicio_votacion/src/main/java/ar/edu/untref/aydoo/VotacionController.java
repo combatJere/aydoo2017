@@ -1,14 +1,14 @@
 package ar.edu.untref.aydoo;
 
 import ar.edu.untref.aydoo.entities.Voto;
-import ar.edu.untref.aydoo.repository.RepositoryService;
+import ar.edu.untref.aydoo.repository.ConsultorDatosElectorales;
 
 public class VotacionController {
 	
-	private RepositoryService repositoryService;
+	private ConsultorDatosElectorales repositoryService;
 	
 	public VotacionController(){
-		repositoryService = new RepositoryService();
+		repositoryService = new ConsultorDatosElectorales();
 	}
 
 	public void emitirVoto(int idVotante, int idCandidato){

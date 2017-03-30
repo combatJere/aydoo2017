@@ -2,14 +2,14 @@ package ar.edu.untref.aydoo;
 
 import org.junit.Test;
 import ar.edu.untref.aydoo.entities.Voto;
-import ar.edu.untref.aydoo.repository.Repository;
+import ar.edu.untref.aydoo.repository.DatosElectorales;
 import org.junit.Assert;
 
 public class getCandidatoConMasVotosTest {
 	
 	@Test
 	public void getCandidatoConMasVotosExito() {
-		Repository.getInstance().getVotos().clear();
+		DatosElectorales.getInstance().getVotos().clear();
 		
 		VotacionController votacionController = new VotacionController();		
 		votacionController.emitirVoto(1, 1);
