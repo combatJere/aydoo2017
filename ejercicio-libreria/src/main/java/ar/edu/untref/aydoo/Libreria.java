@@ -26,11 +26,11 @@ public class Libreria {
 		cliente.agregarSuscripcion(suscribible, fechaInicio, fechaFin, esAnual);
 	}
 
-	public double calcularMontoACobrar(Date mes, int idCliente) {
+	public double calcularMontoACobrar(int anio, int mes, int idCliente) {
 		double montoMensual = 0;
 		Cliente cliente = this.obtenerCliente(idCliente);
-		LinkedList<Compra> comprasParaElMes = cliente.getComprasDelMes(mes);
-		LinkedList<Suscripcion> suscripcionesParaElMes = cliente.getSuscripcionesDelMes(mes);
+		LinkedList<Compra> comprasParaElMes = cliente.getComprasDelMes(anio, mes);
+		LinkedList<Suscripcion> suscripcionesParaElMes = cliente.getSuscripcionesDelMes(anio, mes);
 		
 		for (Compra compra : comprasParaElMes) {
 			montoMensual = montoMensual + compra.getProducto().getPrecioPorUnidad();

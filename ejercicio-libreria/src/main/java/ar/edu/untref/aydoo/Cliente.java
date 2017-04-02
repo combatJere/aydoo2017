@@ -1,5 +1,6 @@
 package ar.edu.untref.aydoo;
 
+import java.util.Calendar;
 import java.util.Date;
 import java.util.LinkedList;
 
@@ -10,8 +11,8 @@ public class Cliente {
 	private String direccion;
 	private LinkedList<Compra> compras;
 	private LinkedList<Suscripcion> suscripciones;
-	
-	public Cliente(int id, String telefono, String direccion){
+
+	public Cliente(int id, String telefono, String direccion) {
 		this.id = id;
 		this.telefono = telefono;
 		this.direccion = direccion;
@@ -60,16 +61,69 @@ public class Cliente {
 	public void setId(int id) {
 		this.id = id;
 	}
-	
 
-	public LinkedList<Compra> getComprasDelMes(Date mes){
-		//TODO
-		return new LinkedList<Compra>();
+	public LinkedList<Compra> getComprasDelMes(int anio, int mes) {
+		LinkedList<Compra> listaComprasEnMes = new LinkedList<Compra>();
+
+		for (Compra compra : compras) {
+			if (this.fechaPerteneceAlMes(compra.getFecha(), anio, mes)) {
+				listaComprasEnMes.add(compra);
+			}
+		}
+
+		return listaComprasEnMes;
 	}
-	
-	public LinkedList<Suscripcion> getSuscripcionesDelMes(Date mes){
-		//TODO
-		return new LinkedList<Suscripcion>();
+
+	public LinkedList<Suscripcion> getSuscripcionesDelMes(int anio, int mes) {
+		LinkedList<Suscripcion> listaSuscripcionesEnMes = new LinkedList<Suscripcion>();
+
+		for (Suscripcion suscripcion : suscripciones) {
+			if (this.fechaEstaEntre(suscripcion.getFechaInicio(), suscripcion.getFechaFin(), anio, mes)) {
+				listaSuscripcionesEnMes.add(suscripcion);
+			}
+		}
+
+		return listaSuscripcionesEnMes;
 	}
-	
+
+	private boolean fechaPerteneceAlMes(Date fecha, int anio, int mes) {
+		Calendar fechaCalendar = Calendar.getInstance();
+		fechaCalendar.setTime(fecha);
+
+		if (fechaCalendar.get(Calendar.YEAR) == anio && fechaCalendar.get(Calendar.MONTH) == mes) {
+			return true;
+		}
+
+		return false;
+	}
+
+	private boolean fechaEstaEntre(Date fechaInicio, Date fechaFin, int anio, int mes) {
+		Calendar fechaInicioCalendar = Calendar.getInstance();
+		fechaInicioCalendar.setTime(fechaInicio);
+		Calendar fechaFinCalendar = Calendar.getInstance();
+		fechaFinCalendar.setTime(fechaFin);
+		
+		if (fechaInicioCalendar.get(Calendar.YEAR) < anio && fechaFinCalendar.get(Calendar.YEAR) > anio) {
+			return true;
+			
+		}
+		if(fechaInicioCalendar.get(Calendar.YEAR) == anio && fechaFinCalendar.get(Calendar.YEAR) > anio){
+			if(fechaInicioCalendar.get(Calendar.MONTH) <= mes){
+				return true;
+			}
+		}
+		if(fechaInicioCalendar.get(Calendar.YEAR) < anio && fechaFinCalendar.get(Calendar.YEAR) == anio){
+			if(fechaFinCalendar.get(Calendar.MONTH) >= mes){
+				return true;
+			}
+		}
+		if(fechaInicioCalendar.get(Calendar.YEAR) == anio && fechaFinCalendar.get(Calendar.YEAR) == anio){
+			if(fechaInicioCalendar.get(Calendar.MONTH) <= mes && fechaFinCalendar.get(Calendar.MONTH) >= mes){
+				return true;
+			}
+		}
+
+		return false;
+	}
+
 }

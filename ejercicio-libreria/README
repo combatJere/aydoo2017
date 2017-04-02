@@ -1,0 +1,3 @@
+No se hacen muchos Test sobre el manejo de fechas y algunas otras funciones, ya que
+seria mas facil (y correcto) hacerlo mediante mocks.
+No se hacen validaciones en las entradas de datos. ya que excede el tiempo disponible.

@@ -1,6 +1,6 @@
 package ar.edu.untref.aydoo;
 
-public class Producto {
+public abstract class Producto {
 
 	protected double precioPorUnidad;
 

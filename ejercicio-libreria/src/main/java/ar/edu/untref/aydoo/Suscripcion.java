@@ -70,6 +70,6 @@ public class Suscripcion {
 			precioPorUnidadConDescuentosAplicados = suscribible.getPrecioPorUnidad();
 		}
 
-		return precioPorUnidadConDescuentosAplicados;
+		return precioPorUnidadConDescuentosAplicados * suscribible.getCantEjemplaresMensuales();
 	}
 }
