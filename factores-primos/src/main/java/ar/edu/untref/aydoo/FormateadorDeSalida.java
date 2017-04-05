@@ -1,5 +1,7 @@
 package ar.edu.untref.aydoo;
 
+import java.util.Collections;
+import java.util.LinkedList;
 import java.util.List;
 
 public class FormateadorDeSalida extends Formateador {
@@ -15,7 +17,7 @@ public class FormateadorDeSalida extends Formateador {
 	public String formatear(List<Integer> numeros, int numeroOriginal) {
 		String numeroFormateado = textoError;
 
-		if (formato.equals("pretty")) {
+		if (formato == null || formato.equals("pretty")) {
 
 			numeroFormateado = textoPretty + numeroOriginal + ":" + this.formatearPretty(numeros);
 
@@ -39,9 +41,11 @@ public class FormateadorDeSalida extends Formateador {
 	}
 
 	private String formatearQuiet(List<Integer> numeros) {
+		List<Integer> listaInvertida = new LinkedList<Integer>(numeros);
+		Collections.reverse(listaInvertida);
 		String numerosEnTexto = new String();
 
-		for (int numero : numeros) {
+		for (int numero : listaInvertida) {
 			numerosEnTexto = numerosEnTexto + numero + "\n";
 		}
 

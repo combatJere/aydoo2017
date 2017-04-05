@@ -10,6 +10,19 @@ import org.junit.Assert;
 public class FormateadorDeSalidaTest {
 
 	@Test
+	public void formateadorNoRecibeFormatoEntoncesPretty() {
+		Formateador formateador = new FormateadorDeSalida(null);
+
+		List<Integer> lista = new LinkedList<Integer>();
+		lista.add(1);
+		lista.add(2);
+
+		String respuesta = formateador.formatear(lista, 3);
+
+		Assert.assertEquals("Factores primos 3: 1 2", respuesta);
+	}
+	
+	@Test
 	public void formatearEnPrettyDevuelveResultados() {
 		Formateador formateador = new FormateadorDeSalida("pretty");
 
@@ -45,7 +58,7 @@ public class FormateadorDeSalidaTest {
 
 		String respuesta = formateador.formatear(lista, 3);
 
-		Assert.assertEquals("1\n2\n", respuesta);
+		Assert.assertEquals("2\n1\n", respuesta);
 	}
 	
 	@Test
@@ -58,7 +71,7 @@ public class FormateadorDeSalidaTest {
 
 		String respuesta = formateador.formatear(lista, 3);
 
-		Assert.assertEquals("1\n2\n", respuesta);
+		Assert.assertEquals("2\n1\n", respuesta);
 	}
 	
 	@Test
