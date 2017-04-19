@@ -17,11 +17,11 @@ public class FormateadorDeSalida extends Formateador {
 	public String formatear(List<Integer> numeros, int numeroOriginal) {
 		String numeroFormateado = textoError;
 
-		if (formato == null || formato.equals("pretty")) {
+		if (formato == null || formato.equals("--format=pretty")) {
 
 			numeroFormateado = textoPretty + numeroOriginal + ":" + this.formatearPretty(numeros);
 
-		} else if (formato.equals("quiet")) {
+		} else if (formato.equals("--format=quiet")) {
 
 			numeroFormateado = this.formatearQuiet(numeros);
 

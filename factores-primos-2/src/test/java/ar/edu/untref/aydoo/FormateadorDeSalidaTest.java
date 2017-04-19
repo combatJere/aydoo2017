@@ -24,7 +24,7 @@ public class FormateadorDeSalidaTest {
 	
 	@Test
 	public void formatearEnPrettyDevuelveResultados() {
-		Formateador formateador = new FormateadorDeSalida("pretty");
+		Formateador formateador = new FormateadorDeSalida("--format=pretty");
 
 		List<Integer> lista = new LinkedList<Integer>();
 		lista.add(1);
@@ -37,7 +37,7 @@ public class FormateadorDeSalidaTest {
 	
 	@Test
 	public void formatearEnPrettyFormatoConMayuscula() {
-		Formateador formateador = new FormateadorDeSalida("PRETTY");
+		Formateador formateador = new FormateadorDeSalida("--format=PRETTY");
 
 		List<Integer> lista = new LinkedList<Integer>();
 		lista.add(1);
@@ -50,7 +50,7 @@ public class FormateadorDeSalidaTest {
 	
 	@Test
 	public void formatearEnQuietDevuelveResultados() {
-		Formateador formateador = new FormateadorDeSalida("quiet");
+		Formateador formateador = new FormateadorDeSalida("--format=quiet");
 
 		List<Integer> lista = new LinkedList<Integer>();
 		lista.add(1);
@@ -63,7 +63,7 @@ public class FormateadorDeSalidaTest {
 	
 	@Test
 	public void formatearEnQuietFormatoConMayuscula() {
-		Formateador formateador = new FormateadorDeSalida("QuiEt");
+		Formateador formateador = new FormateadorDeSalida("--format=QuiEt");
 
 		List<Integer> lista = new LinkedList<Integer>();
 		lista.add(1);
