@@ -10,7 +10,8 @@ public class Programa {
 
 	public static final void main(String arg[]) {
 		int numero = Integer.parseInt(arg[0]);
-		String formato = arg[1];
+
+		String formato = (arg.length > 1) ? arg[1] : null;
 
 		descomponedor = new DescomponedorFactoresPrimos();
 		formateador = new FormateadorDeSalida(formato);
